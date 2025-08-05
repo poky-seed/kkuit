@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router'
 import { RootLayout } from './layouts/root-layout'
 import { paths } from './paths'
 import { LoginView } from '@/views/login'
+import { OnlyPublicGuard } from '@/auth/guard'
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +14,11 @@ export const router = createBrowserRouter([
       },
       {
         path: paths.login,
-        element: <LoginView />,
+        element: (
+          <OnlyPublicGuard>
+            <LoginView />
+          </OnlyPublicGuard>
+        ),
       },
     ],
   },

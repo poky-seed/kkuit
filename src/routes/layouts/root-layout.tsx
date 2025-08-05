@@ -1,3 +1,4 @@
+import { AuthProvider } from '@/auth/context'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Outlet } from 'react-router'
 
@@ -6,7 +7,9 @@ export function RootLayout() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <AuthProvider>
+        <Outlet />
+      </AuthProvider>
     </QueryClientProvider>
   )
 }

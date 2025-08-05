@@ -1,4 +1,4 @@
-import type { Database } from '@/entities/database.types'
+import type { Database } from '@/entities'
 import { createClient } from '@supabase/supabase-js'
 
 export const supabase = createClient<Database>(
