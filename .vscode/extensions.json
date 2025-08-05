@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "denoland.vscode-deno",
+    "esbenp.prettier-vscode",
+    "arcanis.vscode-zipfs",
+    "dbaeumer.vscode-eslint"
+  ]
+}
